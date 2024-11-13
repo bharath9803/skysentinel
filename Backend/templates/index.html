@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- External CSS for styling -->
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li> <!-- Using Flask's url_for function -->
+            <li><a href="{{ url_for('map') }}">Map</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section (This would change based on the page) -->
+    <div id="content">
+        <h1>Welcome to the Vehicle Dashboard</h1>
+        <p>This is the home page. From here, you can access various vehicle details.</p>
+    </div>
+
+</body>
+</html>

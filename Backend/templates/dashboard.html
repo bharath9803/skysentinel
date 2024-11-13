@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li> <!-- Using Flask's url_for function -->
+            <li><a href="{{ url_for('map') }}">Map</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Vehicle Dashboard</h1>
+        <img id="img-id" src="{{ url_for('static', filename='cardrone.webp') }}" alt="Vehicle Image">
+
+    </header>
+
+    <div id="dashboard">
+        <p id="mode">Mode: Car</p>
+        <p id="speed">Speed: 0 km/h</p>
+        <p id="battery">Battery: 100%</p>
+        <p id="location">Location: Lat: 37.7749, Lon: -122.4194</p>
+        <p id="weather">Weather: N/A</p>
+        <p id="battery-prediction">Battery Prediction: N/A</p>
+        <button onclick="switchMode()">Switch to Drone Mode</button>
+    </div>
+    
+    <div id="charts">
+        <canvas id="speedChart"></canvas>
+        <canvas id="batteryChart"></canvas>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

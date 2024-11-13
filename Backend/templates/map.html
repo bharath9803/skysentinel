@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map View</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYLINmyutcCV0NxlpqVVaRbmrBzw8SYXE&callback=initMap" async defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li> <!-- Using Flask's url_for function -->
+            <li><a href="{{ url_for('map') }}">Map</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Vehicle Location</h1>
+    </header>
+
+    <div id="map"></div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
